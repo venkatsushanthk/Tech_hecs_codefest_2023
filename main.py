@@ -1,5 +1,6 @@
 # Codefest 2023.
 
+# from playsound import playsound
 import time
 import random
 
@@ -85,25 +86,86 @@ while True:
         if boulder == "yes":
           print("You have chosen to use your powers on the boulder.\n")
 
-          while True:
-            boulder_power = input("You have 4 powers.\n Your powers are: 1. Flaming song, 2. Turn up the heat, 3. Burn, 4. Inferno.Please type the number assigned for the power.\n\n")
 
-            # Power 1 for boulder
-            if boulder_power == "1":
-              print("In a fit of exhaution after walking for so long you attempt to use flaming song while shouting your favorite melody at the top of your lungs and soon enough the boulder breaks with flames leaving a small space for you to walk past. you continue on.\n")
+          # Hp of objects
+          boulder_hp_f = 100
+          player_hp_1_f = 100
+          f_b = boulder_hp_f
+          f_p = player_hp_1_f
+          while True:
+            # Player's move
+            f_m = input("You have 4 powers to use on the boulder.\n Your powers are: 1. Flaming song, 2. Turn up the heat, 3. Burn, 4. Inferno.Please type the number assigned for the power.\n\n")
+
+            if f_p == 0:
+              print("You have died ..  game over")
+              InterruptedError
               break
-            # Power 2 for boulder  
-            elif boulder_power == "2":
-              print("You gather up all of your energy and use the spell turn up the heat and a circle of fire as high as 4ft and ")
+
+            if f_b == 0:
               break
-            # Power 2 for boulder 
-            elif boulder_power == "3":
-              print("")
-              break
-            # Power 2 for boulder 
-            elif boulder_power == "4":
-              print("")
-              break
+            
+            # Power 1
+            if f_m == "1":
+              f_b = f_b - random.randint(1, 30)
+              if f_b <= 0:
+                f_b = 0
+              print("Boulder hp = " + str(f_b))
+              print("Player hp = " + str(f_p))
+              if f_b == 0:
+                print("In a fit of rage you unleash a godly  amount of power on the bolder compeletly destroying it. \n")
+                break
+                
+            # Power 2
+            elif f_m == "2":
+              f_b = f_b - random.randint(30, 50)
+              f_p = f_p - random.randint(1, 20)
+              if f_b <= 0:
+                f_b = 0
+              print("Bolder hp = " + str(f_b))
+              print("Player hp = " + str(f_p))
+              if f_b == 0:
+                print("In a fit of rage you unleash a godly  amount of power on the bolder compeletly destroying it. \n")
+                break
+
+            # Power 3    
+            elif f_m == "3":
+              f_b = f_b - random.randint(50, 70)
+              f_p = f_p - random.randint(20, 40)
+              if f_b <= 0:
+                f_b = 0
+              print("Bolder hp = " + str(f_b))
+              print("Player hp = " + str(f_p))
+              if f_b == 0:
+                print("In a fit of rage you unleash a godly  amount of power on the bolder compeletly destroying it. \n")
+                break
+
+            # Power 4    
+            elif f_m == "4":
+              f_b = f_b - random.randint(70, 101)
+              f_p = f_p - random.randint(40, 71)
+              if f_b <= 0:
+                f_b = 0
+              print("Bolder hp = " + str(f_b))
+              print("Player hp = " + str(f_p))
+              if f_b == 0:
+                print("In a fit of rage you unleash a godly  amount of power on the bolder compeletly destroying it. Not even 1 of its ashed had the gift of your mercy \n")
+                break
+            break
+        break
+            
+            
+        
+      print("As you walk down the barren and dimly lit tunnel you begin to feel nervous, like there is something watching you. You feel a rumble below your feet as you come across a large door.\n")
+      # time.sleep(7)
+      print("Having nowhere else to go you use a little of your strength to push the door open but to your suprise it opens on its own. \n")
+      # time.sleep(6)
+      print("In the centre of the room lies a creature. It looks like how you would imagine an earth spirit in a fantasy game to look like. It has brown stone like skin and all its hair was green and filled with flowers. \n")
+      # time.sleep(10)
+      print("Its eyes however were bright red and its arms and face were riddled with scars as though it had been whipped everyday. \n")
+      # time.sleep(6)
+      print("After seeing you after you had entered the room it goes into what you can only guess is a crazed frenzy and begins to charge at you. \n")
+     
+      
       
       # Element: Water element
     elif element == 2:
@@ -123,7 +185,7 @@ while True:
     elif element == 3:
 
       # Attacks
-      print("You have chosen the Earth Element , Your memory will now be erased. Your powers are: 1. Retreat behind the hill, 2. Earth quake, 3. Dig deep. 4. Trash compactor")
+      print("You have chosen the Earth Element , Your memory will now be erased. Your powers are: 1. Retreat behind the hill, 2. Trash compactor, 3. Dig deep. 4. Earth quake")
       # time.sleep(10)
       print("Guardian - I see. I cannot guarantee it was a good choice I do however, wish you luck on your journey. \n")
       # time.sleep(8)
@@ -178,10 +240,5 @@ while True:
   else:
     # Type one of the answers
     print("Please keep one of the answers.")
-
-
-
-
-
-
-    
+  
+  
