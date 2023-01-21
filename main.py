@@ -1,8 +1,11 @@
 # Codefest 2023.
 
+
+import os
+import sys
+import subprocess
 import time
 import random
-
 
 # The user is told about the game.
 print("Hello welcome to the game.\n"
@@ -137,7 +140,7 @@ while True:
           break
         break        
 
-        
+      # The story continues
       print("As you walk aimlessly you begin to feel nervous, like there is something watching you. you feel an incline in the tunnel and walk for what was probably hours but felt like days coming across more boulders while testing your newfound abilities. \n")
       # time.sleep(12)
       print("At one point you hit a hard wall but quickly realise it is actually a large door. You are brought back to your senses because of the door instead of a boulder obstructing your path instead. \n")
@@ -153,79 +156,129 @@ while True:
 
       # Hp of players
       earth_fairy_hp = 500
-      player_hp_f = 400
+      player_hp_f = 500
       efh = earth_fairy_hp
       phf = player_hp_f
       while True:
-        
+
+        # Player's move
         f = input("You have 4 powers to use on the fairy\n Your powers are: 1. Flaming song, 2. Turn up the heat, 3. Burn, 4. Inferno.Please type the number assigned for the power.\n\n")
-      
+
+        # Power 1
         if f == "1":
-          efh = efh - random.randint(30, 101)
-          phf = phf - random.randint(30, 101)
+          efh = efh - random.randint(10, 50)
+          phf = phf - random.randint(10, 50)
+          if efh <= 0:
+            efh = 0
+          if phf <= 0:
+            phf = 0
           print("The fairy lunges at you and uses an blade of leafs coated in fire and stabs you.")
+          print("fairy hp = " + str(efh))
+          print("Your hp  = "+ str(phf)) 
+          if efh == 0:
+            print("You finally defeated the Fairy... \n")
+            break
+          if phf ==  0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
+
+        # Power 2   
+        if f == "2":
+          efh = efh - random.randint(50, 100)
+          phf = phf - random.randint(50, 100)  
+          if efh <= 0:
+            efh = 0
+          if phf <= 0:
+            phf = 0
+          print("The fairy shoots water bullets infused with some mud in it at you")
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(phf))  
+          if efh == 0:
+            print("You finally defeated the Fairy... \n")
+            break
+          if phf == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
+
+        # Power 3
+        if f == "3":
+          efh = efh - random.randint(100, 150)
+          phf = phf - random.randint(100, 150)
+          if efh <= 0:
+            efh = 0
+          if phf <= 0: 
+            phf = 0
+          print("The fairy pushes you far and launches a array of tournado's at you.")
           print("fairy hp = " + str(efh))
           print("Your hp  = "+ str(phf)) 
           if efh <= 0:
             print("You finally defeated the Fairy... \n")
-          if phf <=  0: 
-            print("You have died ..  game over")
-          break
-        if f == "2":
-          Earth_fairy_hp = Earth_fairy_hp - random.randint(10, 90)
-          Player_hp_f = Player_hp_f - random.randint(10 , 90)             
-          print("The fairy shoots water bullets infused with some mud in it at you")
-          
-          print("Fairy hp = " + str(Earth_fairy_hp))
-          print("Your hp  = "+ str(Player_hp_f))  
-          Earth_fairy_hp < 0
-          Earth_fairy_hp > 0
-          if Earth_fairy_hp <= 0:
-            print("You finally defeated the Fairy... \n")
-          if Player_hp_f  <=  0: 
-            print("You have died ..  game over")
             break
-        if f == "3":
-            Earth_fairy_hp = Earth_fairy_hp - random.randint(20, 100)
-            Player_hp_f = Player_hp_f - random.randint(20 , 100)
-            print("The fairy pushes you far and launches a array of tournado's at you.")
-            print("fairy hp = " + str(Earth_fairy_hp))
-            print("Your hp  = "+ str(Player_hp_f)) 
-            Earth_fairy_hp < 0  
-            Earth_fairy_hp < 0
-            Earth_fairy_hp > 0
-            if Earth_fairy_hp <= 0:
-             print("You finally defeated the Fairy... \n")
-            if Player_hp_f  <=  0: 
-              print("You have died ..  game over")
-              
-              
-              break
+          if phf <= 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
+
+        # Power 4     
         if f == "4":
-          efh = efh - random.randint(1, 160)
-          phf = phf - random.randint(1, 160)
+          efh = efh - random.randint(150, 200)
+          phf = phf - random.randint(150, 200)
           phf = phf - 50
-          print("The fairy creates fire coated mud bullets and shoots them at you then she creates water tornado's .")
-          if efp <= 0:
-            efh = 0
-          print("fairy hp = " + str(efh))
-          print("Your hp  = "+ str(phf)))
           if efh <= 0:
+            efh = 0
+          if phf <= 0:
+            phf = 0
+          print("The fairy creates fire coated mud bullets and shoots them at you then she creates water tornados.")
+          print("fairy hp = " + str(efh))
+          print("Your hp  = "+ str(phf))
+          if efh == 0:
             print("You finally defeated the Fairy... \n")
             break
-          if phf  <=  0: 
-            print("You have died ..  game over")
+          if phf == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
             break
           
+      # The story continues
+      print("You have finnaly killed the creature and you breath a sigh of relief. prehaps you should just lie down and rest... and you slowly close your eyes. \n")
+      # time.sleep(10)
+      print("This scene feels awfully familiar... no thats impossible the guardian erased all my memories and theres no way i have been here before... \n you hear a small sound at the tip of your ears. \n")
+      # time.sleep(12)
+      print("You slowly open your eyes to see the similar fairy standing over your face peering down at you. 'You must not be a very good man.' In a fright you immideatly move away. \n")
+      # time.sleep(11)
+      print("you finally pull yourself together and get up to notice that the cages had all fallen down. You never noticed it at first but the cages all had creatures inside them and they seem to have broken out of their cages. \n")
+      #t ime.sleep(13)
+      print("The creature were unexpectedly gentle compared to what you would expect lf creatures from hell. \n")
+      # time.sleep(9)
+      print("The creatures have the ability to communicate and talked to you. The littlest one said that they were not monsters but spirits.\n These are creatures you can trust. \n")
+      # time.sleep(11)
+      print("You continue down the dark tunnel, but it no longer seems so dull as you are just happy to have people by your side that was until... \n")
+      # time.sleep(11)
+      print("You hear a giant rumble as the ground breaks beneath you. A enormous hole is created and you begin to fall enwrapped by darkness not sure when it ends. \n")
+      # time.sleep(11)
+      print("You finally land on ground and your body hurts all over. you look all around you and it seems that the spirits had followed you down. Infront of you there is a large gate which feels uncannily familiar. \n")
+      # time.sleep()
+      print("By now you remember most of your life, your family, friends, school but nothing after you turned 18. \n")
+      print("Infromt of you is a large portal. Consumed by curiosity you go through the gate, the spirits following closely behind. \n")
+      print(" You're now in a large elegantly decorated room woth a figure in the middle that seems awfully familiar...")
+      print("He turns around and its the guardian! Why? Why is he here? \n")
+      print("Guardian - Human. You have fallen for my charades yet again! Oh how could you be so stupid? I am no guardian, you are not good and this is not hell! \n")
       
-      print("You have finnaly killed the creature and you breath a sigh of relief. prehaps you should just lie down and rest... \n")
-      # time.sleep(4)
-      print("This scene feels awfully familiar... no thats impossible ")
+      break
+
+
+
+
       
-           # time.sleep(10)
+    break
       
-      
-      # Element: Water element
+    # Element: Water element
     elif element == 2:
       
       # Attacks
@@ -295,89 +348,140 @@ while True:
           break     
         break
 
-      
-      print("As you walk aimlessly you begin to feel nervous, like there is something watching you. you feel an incline in the tunnel and walk for what was probably hours but felt like days coming across more boulders while testing your newfound abilities and occasionaly collapsing from the lack of food. \n")
+      # The story continues
+      print("As you walk aimlessly you begin to feel nervous, like there is something watching you. you feel an incline in the tunnel and walk for what was probably hours but felt like days coming across more boulders while testing your newfound abilities. \n")
       # time.sleep(12)
       print("At one point you hit a hard wall but quickly realise it is actually a large door. You are brought back to your senses because of the door instead of a boulder obstructing your path instead. \n")
-      # time.sleep(6)
-      print("Having nowhere else to go you use a little of your strength to push the door open but to your suprise it opens on its own.\n")
-      # time.sleep(5)
-      print("When you enter there are spikes all over the room exept on the floor. it somewhat looks like a jailcell with cages hanging from the cieling. \n")
-      # time.sleep(5)
-      print("In the centre of the room there are two creatures lined with armor and holding spears.\n They resembled that of an  fairy, but corrupted with stonelike skin and gleaming red eyes.\n Their mouthes were dripping with what you dould only guess was blood and had demeanor was that of a angered beast.\n")
       # time.sleep(12)
-      print("After seeing you after you had entered the room they go into what you can only guess is a crazed frenzy and begin to charge at you.\n\n")
-      Earth_fairy_hp_w = 500
-      Player_hp_w = 400
+      print("Having nowhere else to go you use a little of your strength to push the door open but to your suprise it opens on its own.\n")
+      # time.sleep(10)
+      print("When you enter there are spikes all over the room exept on the floor. it somewhat looks like a jailcell with cages hanging from the cieling. \n")
+      # time.sleep(11)
+      print("In the centre of the room there are two creatures lined with armor and holding spears. They had a look resembled that of an fairy, but corrupted with stonelike skin and gleaming red eyes. Their mouthes were dripping with what you dould only guess was blood and had demeanor was that of a angered beast")
+      # time.sleep(15)
+      print("After the fairy seeing you enter the room they go into what you can only guess is a crazed frenzy and begin to charge at you.\n")
+      # time.sleep(11)
+      
 
+      # Hp of players
+      earth_fairy_hp = 500
+      player_hp_w = 500
+      efh = earth_fairy_hp
+      phw = player_hp_w
+      
       while True:
 
-        
+        # Player's move
         w = input("You have 4 powers to use on the fairy\n Your powers are: 1. Tsunami, 2. Water blocker, 3. Washed up, 4. Flash flood.\n\n")
-      
-        if  w  == "1":
-          Earth_fairy_hp = Earth_fairy_hp - random.randint(30, 100)
-          Player_hp_w = Player_hp_w - random.randint(30,100)
-          print("The fairy lunges at you and uses an blade of leafs coated in fire and stabs you.")
-          print("fairy hp = " + str(Earth_fairy_hp))
-          print("Your hp  = "+ str(Player_hp_w)) 
-          Earth_fairy_hp< 0
-          Earth_fairy_hp > 0
-          if Earth_fairy_hp <= 0:
-            print("You finally defeated the Fairy... \n")
-          if Player_hp_w  <=  0: 
-            print("You have died ..  game over")
-          break
-        if w == "2":
-          Earth_fairy_hp = Earth_fairy_hp - random.randint(10, 90)
-          Player_hp_w = Player_hp_w - random.randint(10 , 90)             
+
+        # Power 1   
+        if w == "1":
+          efh = efh - random.randint(10, 50)
+          phw = phw - random.randint(10, 50)  
+          if efh <= 0:
+            efh = 0
+          if phw <= 0:
+            phw = 0
           print("The fairy shoots water bullets infused with some mud in it at you")
-          
-          print("Fairy hp = " + str(Earth_fairy_hp))
-          print("Your hp  = "+ str(Player_hp_w))  
-          Earth_fairy_hp < 0
-          Earth_fairy_hp > 0
-          if Earth_fairy_hp <= 0:
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(phw))  
+          if efh == 0:
             print("You finally defeated the Fairy... \n")
-          if Player_hp_w  <=  0: 
-            print("You have died ..  game over")
+          if phw == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
             break
+
+        # Power 2   
+        if w == "2":
+          efh = efh - random.randint(50, 100)
+          phw = phw - random.randint(50, 100)  
+          if efh <= 0:
+            efh = 0
+          if phw <= 0:
+            phw = 0
+          print("The fairy shoots water bullets infused with some mud in it at you")
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(phw))  
+          if efh == 0:
+            print("You finally defeated the Fairy... \n")
+            break
+          if phw == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
+          
+  
+        # Power 3  
         if w == "3":
-            Earth_fairy_hp = Earth_fairy_hp - random.randint(20, 100)
-            Player_hp_w = Player_hp_w - random.randint(20 , 100)
-            print("The fairy pushes you far and launches a array of tournado's at you.")
-            print("fairy hp = " + str(Earth_fairy_hp))
-            print("Your hp  = "+ str(Player_hp_w)) 
-            Earth_fairy_hp < 0  
-            Earth_fairy_hp < 0
-            Earth_fairy_hp > 0
-            if Earth_fairy_hp <= 0:
-             print("You finally defeated the Fairy... \n")
-            if Player_hp_w  <=  0: 
-              print("You have died ..  game over")
+          efh = efh - random.randint(100, 150)
+          phf = phw - random.randint(100, 150)  
+          if efh <= 0:
+            efh = 0
+          if phw <= 0:
+            phw = 0
+          print("The fairy shoots water bullets infused with some mud in it at you")
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(phw))  
+          if efh == 0:
+            print("You finally defeated the Fairy... \n")
+            break
+          if phw <= 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
               
-              
-              break
+        # Power 4
         if w == "4":
-            Earth_fairy_hp = Earth_fairy_hp - random.randint(1, 160)
-            Player_hp_w = Player_hp_w - random.randint(1 , 160)
-            print("The fairy creates fire coated mud bullets and shoots them at you then she creates water tornado's .")
-            print("fairy hp = " + str(Earth_fairy_hp))
-            print("Your hp  = "+ str(Player_hp_w)) 
-            Player_hp_w = Player_hp_w - 50
-            Earth_fairy_hp< 0   
-            Earth_fairy_hp< 0
-            Earth_fairy_hp > 0
-            if Earth_fairy_hp <= 0:
-              print("You finally defeated the Fairy... \n")
-              break
-            if Player_hp_w  <=  0: 
-              print("You have died ..  game over")
-              break
-      
-        if Player_hp_w ==  0: 
-          print("You have died ..  game over")
-          break
+          efh = efh - random.randint(150, 200)
+          phw = phw - random.randint(150, 200)  
+          if efh <= 0:
+            efh = 0
+          if phw <= 0:
+            phw = 0
+          print("The fairy shoots water bullets infused with some mud in it at you")
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(phf))  
+          if efh == 0:
+            print("You finally defeated the Fairy... \n")
+            break
+          if phw == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
+
+
+      # The story continues
+      print("You have finaly killed the creature and you breath a sigh of relief. prehaps you should just lie down and rest... and you slowly close your eyes.\n")
+      # time.sleep(4)
+      print("This scene feels awfully familiar... no thats impossible the guardian erased all my memories and theres no way ive been here before... \n you hear a small sound at the tip of your ears. \n")
+      #time.sleep(5)
+      print("You slowly open your eyes to see the similar fairy standing over your face peering down at you. 'You must not be a very good man.' In a fright you immideatly move away. \n")
+      #time.sleep(6)
+      print("The fairy solfy smiles and says 'thanks for helping me out there, I know this doesnt make sense but I am somewhat confused as well' you are curious about what the fairy means but before you get the chance to speak she interrupts you and says 'We have no time! we must get moving before you are found!' and drags you up.\n ")
+      #time.sleep(8)
+      print("you finally pull yourself togethere and get up to notice that the cages had all fallen down. You never noticed it at first but the cages all had creatures inside them and they seem to have broken out of their cages. \n")
+      print("The creature were unexpectedly gentle compared to what you would expect lf creatures from hell. \n")
+      # time.sleep(9)
+      print("The creatures have the ability to communicate and talked to you. The littlest one said that they were not monsters but spirits.\n These are creatures you can trust. \n")
+      # time.sleep(11)
+      print("You continue down the dark tunnel, but it no longer seems so dull as you are just happy to have people by your side that was until... \n")
+      # time.sleep(11)
+      print("You hear a giant rumble as the ground breaks beneath you. A enormous hole is created and you begin to fall enwrapped by darkness not sure when it ends. \n")
+      #time.sleep(11)
+      print("You finally land on ground and your body hurts all over. you look all around you and it seems that the spirits had followed you down. Infront of you there is a large gate which feels uncannily familiar. \n")
+      print("By now you remember most of your life, your family, friends, school but nothing after you turned 18. \n")
+      print("Infromt of you is a large portal. Consumed by curiosity you go through the gate, the spirits following closely behind. \n")
+      print(" You're now in a large elegantly decorated room woth a figure in the middle that seems awfully familiar...")
+      print("He turns around and its the guardian! Why? Why is he here? \n")
+      print("Guardian - Human. You have fallen for my charades yet again! Oh how could you be so stupid? I am no guardian, you are not good and this is not hell! \n")
+
+      break
+    break
       
       # Element: Earth element
     elif element == 3:
@@ -448,87 +552,140 @@ while True:
           break     
         break
 
-        
-      print("As you walk aimlessly you begin to feel nervous, like there is something watching you. you feel an incline in the tunnel and walk for what was probably hours but felt like days coming across more boulders while testing your newfound abilities and occasionaly collapsing from the lack of food. \n")
+        # The story continues
+      print("As you walk aimlessly you begin to feel nervous, like there is something watching you. you feel an incline in the tunnel and walk for what was probably hours but felt like days coming across more boulders while testing your newfound abilities. \n")
       # time.sleep(12)
       print("At one point you hit a hard wall but quickly realise it is actually a large door. You are brought back to your senses because of the door instead of a boulder obstructing your path instead. \n")
-      # time.sleep(6)
-      print("Having nowhere else to go you use a little of your strength to push the door open but to your suprise it opens on its own.\n")
-      # time.sleep(5)
-      print("When you enter there are spikes all over the room exept on the floor. it somewhat looks like a jailcell with cages hanging from the cieling. \n")
-      # time.sleep(5)
-      print("In the centre of the room there are two creatures lined with armor and holding spears.\n They resembled that of a fairy, but corrupted with stonelike skin and gleaming red eyes.\n Their mouthes were dripping with what you dould only guess was blood and had demeanor was that of a angered beast.\n")
       # time.sleep(12)
-      print("After seeing you after you had entered the room they go into what you can only guess is a crazed frenzy and begin to charge at you.\n\n")
-      Earth_fairy_hp = 500
-      Player_hp_f = 400
+      print("Having nowhere else to go you use a little of your strength to push the door open but to your suprise it opens on its own.\n")
+      # time.sleep(10)
+      print("When you enter there are spikes all over the room exept on the floor. it somewhat looks like a jailcell with cages hanging from the cieling. \n")
+      # time.sleep(11)
+      print("In the centre of the room there are two creatures lined with armor and holding spears. They had a look resembled that of an fairy, but corrupted with stonelike skin and gleaming red eyes. Their mouthes were dripping with what you dould only guess was blood and had demeanor was that of a angered beast")
+      # time.sleep(15)
+      print("After the fairy seeing you enter the room they go into what you can only guess is a crazed frenzy and begin to charge at you.\n")
+      # time.sleep(11)
+      
+
+      # Hp of players
+      earth_fairy_hp = 500
+      player_hp_e = 500
+      efh = earth_fairy_hp
+      phe = player_hp_e
       while True:
         
-        e = input("You have 4 powers to use on the fairy\n Your powers are: 1. orbit,2. anti gravity 3. Fly away  , 4. Blackhole .Please type the number assigned for the power.\n\n")
-      
-        if  e <= "1":
-          Earth_fairy_hp = Earth_fairy_hp - random.randint(30, 100)
-          Player_hp_e = Player_hp_e - random.randint(30,100)
-          print("The fairy lunges at you and uses an blade of leafs coated in fire and stabs you.")
-          print("fairy hp = " + str(Earth_fairy_hp))
-          print("Your hp  = "+ str(Player_hp_e)) 
-          Earth_fairy_hp< 0
-          Earth_fairy_hp > 0
-          if Earth_fairy_hp <= 0:
-            print("You finally defeated the Fairy... \n")
-          if Player_hp_e  <=  0: 
-            print("You have died ..  game over")
-          break
-        if e == "2":
-          Earth_fairy_hp = Earth_fairy_hp - random.randint(10, 90)
-          Player_hp_e = Player_hp_e - random.randint(10 , 90)
+        # Player's move
+        e = input("You have 4 powers to use on the fairy\n Your powers are: 1. Retreat behind the hill, 2. Trash compactor, 3. Dig deep. 4. Earth quake.\n\n")
+
+        
+        # Power 1   
+        if e == "1":
+          efh = efh - random.randint(10, 50)
+          phe = phe - random.randint(10, 50)  
+          if efh <= 0:
+            efh = 0
+          if phe <= 0:
+            phe = 0
           print("The fairy shoots water bullets infused with some mud in it at you")
-          
-          print("Fairy hp = " + str(Earth_fairy_hp))
-          print("Your hp  = "+ str(Player_hp_e))  
-          Earth_fairy_hp < 0
-          Earth_fairy_hp > 0
-          if Earth_fairy_hp <= 0:
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(phe))  
+          if efh == 0:
             print("You finally defeated the Fairy... \n")
-          if Player_hp_e  <=  0: 
-            print("You have died ..  game over")
             break
+          if phe == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
+
+            
+        # Power 2   
+        if e == "2":
+          efh = efh - random.randint(50, 100)
+          phe = phe - random.randint(0, 0)  
+          if efh <= 0:
+            efh = 0
+          if phe <= 0:
+            phe = 0
+          print("The fairy shoots water bullets infused with some mud in it at you")
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(phe))  
+          if efh == 0:
+            print("You finally defeated the Fairy... \n")
+            break
+          if phe == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
+
+        # Power 3   
         if e == "3":
-            Earth_fairy_hp = Earth_fairy_hp - random.randint(20, 100)
-            Player_hp_e = Player_hp_e - random.randint(20 , 100)
-            print("The fairy pushes you far and launches a array of tournado's at you.")
-            print("fairy hp = " + str(Earth_fairy_hp))
-            print("Your hp  = "+ str(Player_hp_e)) 
-            Earth_fairy_hp < 0  
-            Earth_fairy_hp < 0
-            Earth_fairy_hp > 0
-            if Earth_fairy_hp <= 0:
-             print("You finally defeated the Fairy... \n")
-            if Player_hp_e  <=  0: 
-              print("You have died ..  game over")
+          efh = efh - random.randint(100, 150)
+          phe = phe - random.randint(100, 150)  
+          if efh <= 0:
+            efh = 0
+          if phe <= 0:
+            phe = 0
+          print("The fairy shoots water bullets infused with some mud in it at you")
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(phe))  
+          if efh == 0:
+            print("You finally defeated the Fairy... \n")
+            break
+          if phe == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
               
-              
-              break
+        # Power 4
         if e == "4":
-            Earth_fairy_hp = Earth_fairy_hp - random.randint(1, 160)
-            Player_hp_e = Player_hp_e - random.randint(1 , 160)
-            print("The fairy creates fire coated mud bullets and shoots them at you then she creates water tornado's .")
-            print("fairy hp = " + str(Earth_fairy_hp))
-            print("Your hp  = "+ str(Player_hp_e)) 
-            Player_hp_e = Player_hp_e - 50
-            Earth_fairy_hp< 0   
-            Earth_fairy_hp< 0
-            Earth_fairy_hp > 0
-            if Earth_fairy_hp <= 0:
-              print("You finally defeated the Fairy... \n")
-              break
-            if Player_hp_e  <=  0: 
-              print("You have died ..  game over")
-              break
-      
-        if Player_hp_e ==  0: 
-          print("You have died ..  game over")
-          break
+          efh = efh - random.randint(150, 200)
+          phe = phe - random.randint(150, 200)  
+          if efh <= 0:
+            efh = 0
+          if phe <= 0:
+            phe = 0
+          print("The fairy shoots water bullets infused with some mud in it at you")
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(phe))  
+          if efh == 0:
+            print("You finally defeated the Fairy... \n")
+            break
+          if phe == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
+
+        # The story continues
+        print("You have finaly killed the creature and you breath a sigh of relief. prehaps you should just lie down and rest... and you slowly close your eyes.\n")
+      # time.sleep(11)
+      print("This scene feels awfully familiar... no thats impossible the guardian erased all my memories and theres no way ive been here before... \n you hear a small sound at the tip of your ears. \n")
+      #time.sleep(12)
+      print("You slowly open your eyes to see the similar fairy standing over your face peering down at you. 'You must not be a very good man.' In a fright you immideatly move away. \n")
+      #time.sleep(11)
+      print("The fairy solfy smiles and says 'thanks for helping me out there, I know this doesnt make sense but I am somewhat confused as well' you are curious about what the fairy means but before you get the chance to speak she interrupts you and says 'We have no time! we must get moving before you are found!' and drags you up.\n ")
+      #time.sleep(16)
+      print("you finally pull yourself togethere and get up to notice that the cages had all fallen down. You never noticed it at first but the cages all had creatures inside them and they seem to have broken out of their cages. \n")
+      print("The creature were unexpectedly gentle compared to what you would expect lf creatures from hell. \n")
+      # time.sleep(9)
+      print("The creatures have the ability to communicate and talked to you. The littlest one said that they were not monsters but spirits.\n These are creatures you can trust. \n")
+      # time.sleep(11)
+      print("You continue down the dark tunnel, but it no longer seems so dull as you are just happy to have people by your side that was until... \n")
+      # time.sleep(11)
+      print("You hear a giant rumble as the ground breaks beneath you. A enormous hole is created and you begin to fall enwrapped by darkness not sure when it ends. \n")
+      #time.sleep(11)
+      print("You finally land on ground and your body hurts all over. you look all around you and it seems that the spirits had followed you down. Infront of you there is a large gate which feels uncannily familiar. \n")
+      print("By now you remember most of your life, your family, friends, school but nothing after you turned 18. \n")
+      print("Infromt of you is a large portal. Consumed by curiosity you go through the gate, the spirits following closely behind. \n")
+      print(" You're now in a large elegantly decorated room woth a figure in the middle that seems awfully familiar...")
+      print("He turns around and its the guardian! Why? Why is he here? \n")
+      print("Guardian - Human. You have fallen for my charades yet again! Oh how could you be so stupid? I am no guardian, you are not good and this is not hell! \n")
+      # time.sleep(10)
+      break
+    break
       
       # Element: Space element
     elif element == 4:
@@ -599,95 +756,136 @@ while True:
           break     
         break
 
-        
-      print("As you walk aimlessly you begin to feel nervous, like there is something watching you.\n you feel an incline in the tunnel and walk for what was probably hours but felt like days coming across more boulders while testing your newfound abilities and occasionaly collapsing from the lack of food. \n")
+        # The story continues
+      print("As you walk aimlessly you begin to feel nervous, like there is something watching you. you feel an incline in the tunnel and walk for what was probably hours but felt like days coming across more boulders while testing your newfound abilities. \n")
       # time.sleep(12)
-      print("At one point you hit a hard wall but quickly realise it is actually a large door. You are brought back to your senses because of the door instead of a boulder obstructing your path instead.\n")
-      # time.sleep(6)
+      print("At one point you hit a hard wall but quickly realise it is actually a large door. You are brought back to your senses because of the door instead of a boulder obstructing your path instead. \n")
+      # time.sleep(12)
       print("Having nowhere else to go you use a little of your strength to push the door open but to your suprise it opens on its own.\n")
-      # time.sleep(5)
+      # time.sleep(10)
       print("When you enter there are spikes all over the room exept on the floor. it somewhat looks like a jailcell with cages hanging from the cieling. \n")
-      # time.sleep(5)
-      print("In the centre of the room there are two creatures lined with armor and holding spears.\n They resembled that of an earth fairy, but corrupted with stonelike skin and gleaming red eyes.\n Their mouthes were dripping with what you dould only guess was blood and had demeanor was that of a angered beast.\n")
-      # time.sleep(12)
-      print("After seeing you after you had entered the room they go into what you can only guess is a crazed frenzy and begin to charge at you.\n\n")
+      # time.sleep(11)
+      print("In the centre of the room there are two creatures lined with armor and holding spears. They had a look resembled that of an fairy, but corrupted with stonelike skin and gleaming red eyes. Their mouthes were dripping with what you dould only guess was blood and had demeanor was that of a angered beast")
+      # time.sleep(15)
+      print("After the fairy seeing you enter the room they go into what you can only guess is a crazed frenzy and begin to charge at you.\n")
+      # time.sleep(11)
+
+      earth_fairy_hp = 500
+      efh = earth_fairy_hp
+      player_hp_s = 500
+      pha = player_hp_s
+      while True:
+        s = input("You have 4 powers to use on the fairy\n Your powers are: 1. orbit,2. anti gravity 3. Fly away  , 4. Blackhole .Please type the number assigned for the power.\n\n")
       
-import random
+        # Power 1
+        if s == "1":
+          efh = efh - random.randint(10, 50)
+          pha = pha - random.randint(10, 50)  
+          if efh <= 0:
+            efh = 0
+          if pha <= 0:
+            pha = 0
+          print("The fairy shoots water bullets infused with some mud in it at you")
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(pha))  
+          if efh == 0:
+            print("You finally defeated the Fairy... \n")
+            break
+          if pha == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
 
+        # Power 2
+        if a == "2":
+          efh = efh - random.randint(50, 100)
+          pha = pha - random.randint(50, 100)  
+          if efh <= 0:
+            efh = 0
+          if pha <= 0:
+            pha = 0
+          print("The fairy shoots water bullets infused with some mud in it at you")
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(pha))  
+          if efh == 0:
+            print("You finally defeated the Fairy... \n")
+            break
+          if pha == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
 
-Earth_fairy_hp = 300
-Player_hp_s = 300
-while True:
-  v = input("You have 4 powers to use on the fairy\n Your powers are: 1. orbit,2. anti gravity 3. Fly away  , 4. Blackhole .Please type the number assigned for the power.\n\n")
+        # Power 3
+        if a == "3":
+          efh = efh - random.randint(100, 150)
+          pha = pha - random.randint(100, 150)  
+          if efh <= 0:
+            efh = 0
+          if pha <= 0:
+            pha = 0
+          print("The fairy shoots water bullets infused with some mud in it at you")
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(pha))  
+          if efh == 0:
+            print("You finally defeated the Fairy... \n")
+            break
+          if pha == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break  
 
-  if v <= "1":
-    Earth_fairy_hp = Earth_fairy_hp - random.randint(30, 100)
-    Player_hp_s = Player_hp_s - random.randint(30 , 100)
-    print("The fairy lunges at you and uses an blade of leafs coated in fire and stabs you.")
-    print("fairy hp = " + str(Earth_fairy_hp))
-    print("Your hp  = "+ str(Player_hp_s)) 
-    Earth_fairy_hp< 0
-    Earth_fairy_hp > 0
-    if Earth_fairy_hp <= 0:
-      print("You finally defeated the Fairy... \n")
-    if Player_hp_s  <=  0: 
-      print("You have died ..  game over")
-    break
-  if v == "2":
-    Earth_fairy_hp = Earth_fairy_hp - random.randint(10, 90)
-    Player_hp_s = Player_hp_s - random.randint(10 , 90)             
-    print("The fairy shoots water bullets infused with some mud in it at you")
-    
-    print("Fairy hp = " + str(Earth_fairy_hp))
-    print("Your hp  = "+ str(Player_hp_s))  
-    Earth_fairy_hp < 0
-    Earth_fairy_hp > 0
-    if Earth_fairy_hp <= 0:
-      print("You finally defeated the Fairy... \n")
-    if Player_hp_s  <=  0: 
-      print("You have died ..  game over")
+        # Power 4
+        if a == "4":
+          efh = efh - random.randint(150, 200)
+          pha = pha - random.randint(150, 200)  
+          if efh <= 0:
+            efh = 0
+          if pha <= 0:
+            pha = 0
+          print("The fairy shoots water bullets infused with some mud in it at you")
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(pha))  
+          if efh == 0:
+            print("You finally defeated the Fairy... \n")
+            break
+          if pha == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
+
+        
+    # The story continues
+        print("You have finaly killed the creature and you breath a sigh of relief. prehaps you should just lie down and rest... and you slowly close your eyes.\n")
+      # time.sleep(11)
+      print("This scene feels awfully familiar... no thats impossible the guardian erased all my memories and theres no way ive been here before... \n you hear a small sound at the tip of your ears. \n")
+      #time.sleep(12)
+      print("You slowly open your eyes to see the similar fairy standing over your face peering down at you. 'You must not be a very good man.' In a fright you immideatly move away. \n")
+      #time.sleep(11)
+      print("The fairy solfy smiles and says 'thanks for helping me out there, I know this doesnt make sense but I am somewhat confused as well' you are curious about what the fairy means but before you get the chance to speak she interrupts you and says 'We have no time! we must get moving before you are found!' and drags you up.\n ")
+      #time.sleep(16)
+      print("you finally pull yourself togethere and get up to notice that the cages had all fallen down. You never noticed it at first but the cages all had creatures inside them and they seem to have broken out of their cages. \n")
+      print("The creature were unexpectedly gentle compared to what you would expect lf creatures from hell. \n")
+      # time.sleep(9)
+      print("The creatures have the ability to communicate and talked to you. The littlest one said that they were not monsters but spirits.\n These are creatures you can trust. \n")
+      # time.sleep(11)
+      print("You continue down the dark tunnel, but it no longer seems so dull as you are just happy to have people by your side that was until... \n")
+      # time.sleep(11)
+      print("You hear a giant rumble as the ground breaks beneath you. A enormous hole is created and you begin to fall enwrapped by darkness not sure when it ends. \n")
+      #time.sleep(11)
+      print("You finally land on ground and your body hurts all over. you look all around you and it seems that the spirits had followed you down. Infront of you there is a large gate which feels uncannily familiar. \n")
+      print("By now you remember most of your life, your family, friends, school but nothing after you turned 18. \n")
+      print("Infromt of you is a large portal. Consumed by curiosity you go through the gate, the spirits following closely behind. \n")
+      print(" You're now in a large elegantly decorated room woth a figure in the middle that seems awfully familiar...")
+      print("He turns around and its the guardian! Why? Why is he here? \n")
+      print("Guardian - Human. You have fallen for my charades yet again! Oh how could you be so stupid? I am no guardian, you are not good and this is not hell! \n")
+      # time.sleep(10)
       break
-  if v == "3":
-      Earth_fairy_hp = Earth_fairy_hp - random.randint(20, 100)
-      Player_hp_s = Player_hp_s - random.randint(20 , 100)
-      print("The fairy pushes you far and launches a array of tournado's at you.")
-      print("fairy hp = " + str(Earth_fairy_hp))
-      print("Your hp  = "+ str(Player_hp_s)) 
-      Earth_fairy_hp < 0  
-      Earth_fairy_hp < 0
-      Earth_fairy_hp > 0
-      if Earth_fairy_hp <= 0:
-       print("You finally defeated the Fairy... \n")
-      if Player_hp_s  <=  0: 
-        print("You have died ..  game over")
-        
-        
-        break
-  if v == "4":
-      Earth_fairy_hp = Earth_fairy_hp - random.randint(1, 160)
-      Player_hp_s = Player_hp_s - random.randint(1 , 160)
-      print("The fairy creates fire coated mud bullets and shoots them at you then she creates water tornado's .")
-      print("fairy hp = " + str(Earth_fairy_hp))
-      print("Your hp  = "+ str(Player_hp_s)) 
-      Player_hp_s = Player_hp_s - 50
-      Earth_fairy_hp< 0   
-      Earth_fairy_hp< 0
-      Earth_fairy_hp > 0
-      if Earth_fairy_hp <= 0:
-        print("You finally defeated the Fairy... \n")
-        break
-      if Player_hp_s  <=  0: 
-        print("You have died ..  game over")
-        break
-
-  if Player_hp_s  ==  0: 
-    print("You have died ..  game over")
     break
-    
 
-  
-
-      
       # Element: Air element
     elif element == 5: 
 
@@ -725,7 +923,7 @@ while True:
                 a_b = 0
               print("Boulder hp = " + str(a_b))
               if a_b <= 0:
-                print("In a fit of rage you unleash a massive tornado on the boulder compeletly destroying it. \n")
+                print("In a fit of rage, you unleash a massive tornado on the boulder, compeletly destroying it. \n")
                 break
 
             # Power 3     
@@ -741,28 +939,142 @@ while True:
             # Power 4
             if a_m == "4":
               a_b = a_b - random.randint(70, 101)
-              if a_b <= 0:
-                a_b = 0
-              print("Boulder hp = " + str(a_b))    
-              if a_b <= 0:
-                print("In a fit of rage you unleash a godly  amount of power on the boulder compeletly destroying it. \n")
-                break
+              print("The boulder spins! Nothing happens. try Again!")
+              
           break
         break
-
         
-      print("As you walk aimlessly you begin to feel nervous, like there is something watching you. you feel an incline in the tunnel and walk for what was probably hours but felt like days coming across more boulders while testing your newfound abilities and occasionaly collapsing from the lack of food. \n")
+      # The story continues
+      print("As you walk aimlessly you begin to feel nervous, like there is something watching you. you feel an incline in the tunnel and walk for what was probably hours but felt like days coming across more boulders while testing your newfound abilities. \n")
       # time.sleep(12)
       print("At one point you hit a hard wall but quickly realise it is actually a large door. You are brought back to your senses because of the door instead of a boulder obstructing your path instead. \n")
-      # time.sleep(6)
-      print("Having nowhere else to go you use a little of your strength to push the door open but to your suprise it opens on its own.\n")
-      # time.sleep(5)
-      print("When you enter there are spikes all over the room exept on the floor. it somewhat looks like a jailcell with cages hanging from the cieling. \n")
-      # time.sleep(5)
-      print("In the centre of the room there are two creatures lined with armor and holding spears.\n They resembled that of an earth fairy, but corrupted with stonelike skin and gleaming red eyes.\n Their mouthes were dripping with what you dould only guess was blood and had demeanor was that of a angered beast.\n")
       # time.sleep(12)
-      print("After seeing you after you had entered the room they go into what you can only guess is a crazed frenzy and begin to charge at you.\n\n")
-  
+      print("Having nowhere else to go you use a little of your strength to push the door open but to your suprise it opens on its own.\n")
+      # time.sleep(10)
+      print("When you enter there are spikes all over the room exept on the floor. it somewhat looks like a jailcell with cages hanging from the cieling. \n")
+      # time.sleep(11)
+      print("In the centre of the room there are two creatures lined with armor and holding spears. They had a look resembled that of an fairy, but corrupted with stonelike skin and gleaming red eyes. Their mouthes were dripping with what you dould only guess was blood and had demeanor was that of a angered beast")
+      # time.sleep(15)
+      print("After the fairy seeing you enter the room they go into what you can only guess is a crazed frenzy and begin to charge at you.\n")
+      # time.sleep(11)
+
+      
+      earth_fairy_hp = 500
+      player_hp_a = 500
+      efh = earth_fairy_hp
+      pha = player_hp_a
+      while True:
+        # Player's moves
+        a = input("You have 4 powers to use on the fairy\n our powers are: 1. Upper Class, 2. tornado, 3.Blow them away, 4. Dizzying speed.\n\n")
+
+        # Power 1
+        if a == "1":
+          efh = efh - random.randint(100, 150)
+          pha = pha - random.randint(100, 150)  
+          if efh <= 0:
+            efh = 0
+          if pha <= 0:
+            pha = 0
+          print("The fairy shoots water bullets infused with some mud in it at you")
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(pha))  
+          if efh == 0:
+            print("You finally defeated the Fairy... \n")
+            break
+          if pha == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
+
+        # Power 2
+        if s == "4":
+          efh = efh - random.randint(100, 150)
+          pha = pha - random.randint(100, 150)  
+          if efh <= 0:
+            efh = 0
+          if pha <= 0:
+            pha = 0
+          print("The fairy shoots water bullets infused with some mud in it at you")
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(pha))  
+          if efh == 0:
+            print("You finally defeated the Fairy... \n")
+            break
+          if pha == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
+
+          # Power 4
+        if s == "4":
+          efh = efh - random.randint(100, 150)
+          pha = pha - random.randint(100, 150)  
+          if efh <= 0:
+            efh = 0
+          if pha <= 0:
+            pha = 0
+          print("The fairy shoots water bullets infused with some mud in it at you")
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(pha))  
+          if efh == 0:
+            print("You finally defeated the Fairy... \n")
+            break
+          if pha == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
+
+          # Power 4
+        if s == "4":
+          efh = efh - random.randint(100, 150)
+          pha = pha - random.randint(100, 150)  
+          if efh <= 0:
+            efh = 0
+          if pha <= 0:
+            pha = 0
+          print("The fairy shoots water bullets infused with some mud in it at you")
+          print("Fairy hp = " + str(efh))
+          print("Your hp  = "+ str(pha))  
+          if efh == 0:
+            print("You finally defeated the Fairy... \n")
+            break
+          if pha == 0: 
+            print("You have died ..  game over. \n\n\n")
+            subprocess.call([sys.executable, os.path.realpath(__file__)] +
+sys.argv[1:])
+            break
+
+            
+      # The story continues
+      print("You have finaly killed the creature and you breath a sigh of relief. prehaps you should just lie down and rest... and you slowly close your eyes.\n")
+      # time.sleep(11)
+      print("This scene feels awfully familiar... no thats impossible the guardian erased all my memories and theres no way ive been here before... \n you hear a small sound at the tip of your ears. \n")
+      #time.sleep(12)
+      print("You slowly open your eyes to see the similar fairy standing over your face peering down at you. 'You must not be a very good man.' In a fright you immideatly move away. \n")
+      #time.sleep(11)
+      print("The fairy solfy smiles and says 'thanks for helping me out there, I know this doesnt make sense but I am somewhat confused as well' you are curious about what the fairy means but before you get the chance to speak she interrupts you and says 'We have no time! we must get moving before you are found!' and drags you up.\n ")
+      #time.sleep(16)
+      print("you finally pull yourself togethere and get up to notice that the cages had all fallen down. You never noticed it at first but the cages all had creatures inside them and they seem to have broken out of their cages. \n")
+      print("The creatures were unexpectedly gentle compared to what you would expect lf creatures from hell. \n")
+      # time.sleep(9)
+      print("The creatures have the ability to communicate and talked to you. The littlest one said that they were not monsters but spirits.\n These are creatures you can trust. \n")
+      # time.sleep(11)
+      print("You continue down the dark tunnel, but it no longer seems so dull as you are just happy to have people by your side that was until... \n")
+      # time.sleep(11)
+      print("You hear a giant rumble as the ground breaks beneath you. A enormous hole is created and you begin to fall enwrapped by darkness not sure when it ends. \n")
+      #time.sleep(11)
+      print("You finally land on ground and your body hurts all over. you look all around you and it seems that the spirits had followed you down. Infront of you there is a large gate which feels uncannily familiar. \n")
+      print("By now you remember most of your life, your family, friends, school but nothing after you turned 18. \n")
+      print("Infromt of you is a large portal. Consumed by curiosity you go through the gate, the spirits following closely behind. \n")
+      print(" You're now in a large elegantly decorated room woth a figure in the middle that seems awfully familiar...")
+      print("He turns around and its the guardian! Why? Why is he here? \n")
+      print("Guardian - Human. You have fallen for my charades yet again! Oh how could you be so stupid? I am no guardian, you are not good and this is not hell! \n")
+      # time.sleep(10)
+      break
+    break
       
   elif offer == "no":
     
