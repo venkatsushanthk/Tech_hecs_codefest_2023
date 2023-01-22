@@ -4,7 +4,7 @@
 import os
 import sys
 import subprocess
-import time
+import time 
 import random
 
 # The user is told about the game.
@@ -27,32 +27,32 @@ while True:
 # The story is told.
 print("\n\n")
 print("You wake up in a dark isolated room...\n")
-# time.sleep(4) 
+time.sleep(2) 
 print("It seems you are in a test tube of sorts.\n")
-# time.sleep(4)
+time.sleep(2)
 print("You look around , all you see is People in black suits...\n")
-# time.sleep(5) 
+time.sleep(2) 
 print("...They seem to be talking to eachother but you can only make out a few words.\n")
-# time.sleep(5) 
+time.sleep(3) 
 print("You close your eyes... When you open them you are in an unknown place.\n")
-# time.sleep(7)
+time.sleep(3)
 print("You Are no longer in the test tube .. But you are now in front of a unknown being...\n")
-# time.sleep(8)
+time.sleep(3)
 print("You look around , It seems you are at the entrance of a dungeon.\n")
-# time.sleep(7)
+ time.sleep(3)
 
 
 # The user is told about the gates of hell
 print("Unknown being - Hello Human I am The Guardian of these gates.. I will let you pass without any trouble but... you will die in there , These are the gates to what you call hell... I suggest you tread with caution.\n")
-# time.sleep(15)
+time.sleep(5)
 print("Guardian - You may wonder why would you want to go through hell... but its your only choice if you want to be reincarnated into a new body.\n")
-# time.sleep(15)
+time.sleep(4)
 print("Guardian - I will present you a opportunity to survive in hell... because if you enter with only your mortal strength you will surely die...\n")
-# time.sleep(15)
+time.sleep(4)
 print("Guardian - If you decide to trade all your memories before you reached here, I will present you with the opportunity To choose one of the 5 elemental powers to accompany you on your journey through the realm of hell.\n")
-# time.sleep(20)
+time.sleep(5)
 print("Guardian - If you dont accept this offer you will most likely die in hell..\n\n\n")
-# time.sleep(14)
+time.sleep(3)
 
 
 # Choice of powers.
@@ -64,7 +64,7 @@ while True:
   if offer == "yes":
     
     print("Guardian - I will take your memories when you have chosen your Element.\n\n")
-    #time.sleep(7)
+    time.sleep(3)
     # This is the powers you choose.
     print("There are 5 element which one do you choose?")
     element = int(input("1. Fire: Attack, 2. Water: Medium Attack, 3. Earth: Passive, 4. Space: Medium Defence, 5. Air: Defence. Type the number according to the power assigned.\n\n"))
@@ -73,15 +73,16 @@ while True:
     if element == 1:
       
       # Attacks
-      print(" You have chosen the Fire Element , Your memories will now be erased. Your powers are: 1. Flaming song, 2. Turn up the heat, 3. Burn, 4. Inferno\n")
+      print(" You have chosen the Fire Element , Your memories will now be erased. Your powers are: 1. Flaming song, 2. Turn up the heat, 3. Burn, 4. Inferno.\n")
+      time.sleep(4)
       print("Guardian - I cannot tell you if You made a good choice but i wish you the best of luck on your journey..\n")
-      # time.sleep(10)
+      time.sleep(3)
       print("You enter hell with Your New Fire element.\n")
       
       while True:
-        # time.sleep(6)
+        time.sleep(3)
         print("The gates open into a dimly lit tunnel and you walk for what seems like an infinite amount of time when you come accros a large boulder blocking your path.\n")
-        # time.sleep(7)
+        time.sleep(4)
         boulder_f = input("Would you like to attempt to use your powers on the boulder?\n Type yes or no.\n").lower()
 
         # You use your powers for the boulder.
@@ -141,17 +142,17 @@ while True:
 
       # The story continues
       print("As you walk aimlessly you begin to feel nervous, like there is something watching you. you feel an incline in the tunnel and walk for what was probably hours but felt like days coming across more boulders while testing your newfound abilities. \n")
-      # time.sleep(12)
+      time.sleep(6)
       print("At one point you hit a hard wall but quickly realise it is actually a large door. You are brought back to your senses because of the door instead of a boulder obstructing your path instead. \n")
-      # time.sleep(12)
+      time.sleep(5)
       print("Having nowhere else to go you use a little of your strength to push the door open but to your suprise it opens on its own.\n")
-      # time.sleep(10)
+      time.sleep(4)
       print("When you enter there are spikes all over the room exept on the floor. it somewhat looks like a jailcell with cages hanging from the cieling. \n")
-      # time.sleep(11)
+      time.sleep(4)
       print("In the centre of the room there are two creatures lined with armor and holding spears. They had a look resembled that of an fairy, but corrupted with stonelike skin and gleaming red eyes. Their mouthes were dripping with what you dould only guess was blood and had demeanor was that of a angered beast.\n")
-      # time.sleep(15)
+      time.sleep(7)
       print("After the fairy seeing you enter the room they go into what you can only guess is a crazed frenzy and begin to charge at you.\n")
-      # time.sleep(11)
+      time.sleep(4)
 
       # Hp of players
       earth_fairy_hp = 500
@@ -245,44 +246,45 @@ sys.argv[1:])
             break
           
       # The story continues
+            time.sleep(3)
       print("You have finnaly killed the creature and you breath a sigh of relief. prehaps you should just lie down and rest... and you slowly close your eyes. \n")
-      # time.sleep(10)
+      time.sleep(4)
       print("This scene feels awfully familiar... no thats impossible the guardian erased all my memories and theres no way i have been here before... \n you hear a small sound at the tip of your ears. \n")
-      # time.sleep(12)
+      time.sleep(4)
       print("You slowly open your eyes to see the similar fairy standing over your face peering down at you. 'You must not be a very good man.' In a fright you immideatly move away. \n")
-      # time.sleep(11)
+      time.sleep(4)
       print("you finally pull yourself together and get up to notice that the cages had all fallen down. You never noticed it at first but the cages all had creatures inside them and they seem to have broken out of their cages. \n")
-      #t ime.sleep(13)
+      time.sleep(5)
       print("The creature were unexpectedly gentle compared to what you would expect lf creatures from hell. \n")
-      # time.sleep(9)
+       time.sleep(3)
       print("The creatures have the ability to communicate and talked to you. The littlest one said that they were not monsters but spirits.\n These are creatures you can trust. \n")
-      # time.sleep(11)
+      time.sleep(4)
       print("You continue down the dark tunnel, but it no longer seems so dull as you are just happy to have people by your side that was until... \n")
-      # time.sleep(11)
+      time.sleep(4)
       print("You hear a giant rumble as the ground breaks beneath you. A enormous hole is created and you begin to fall enwrapped by darkness not sure when it ends. \n")
-      # time.sleep(11)
+      time.sleep(4)
       print("You finally land on ground and your body hurts all over. you look all around you and it seems that the spirits had followed you down. In front of you there is a large gate which feels uncannily familiar. \n")
-      # time.sleep(12)
+      time.sleep(5)
       print("By now you remember most of your life, your family, friends, school but nothing after you turned 18. \n")
-      # time.sleep(9)
+      time.sleep(3)
       print("Infront of you is a large portal.\n Consumed by curiosity you go through the gate, the spirits following closely behind. \n")
-      # time.sleep(10)
+      time.sleep(4)
       print(" You're now in a large elegantly decorated room woth a figure in the middle that seems awfully familiar...\n")
-      # time.sleep(9)
+      time.sleep(3)
       print("He turns around and its the guardian! Why? Why is he here? \n")
-      # time.sleep(7)
+      time.sleep(2)
       print("Guardian - Human. You have fallen for my charades yet again! Oh how could you be so stupid? I am no guardian, you are not good and this is not hell! \n")
-      # time.sleep(11)
+      time.sleep(4)
       print("Guardian - I am actually the Essence of Ohio. You have to battle me to get out of this world.\n")
-      # time.sleep(12)
+      time.sleep(3)
 
       
       print("You meet face to face with the essence of Ohio.. \n")
-      # time.sleep(6)
+      time.sleep(3)
       print("Essence of Ohio - Hello again .. i understand that you have conquered hell with my power... and you should understand that you only have an fraction of my power.\n")
-      # time.sleep(11)
+      time.sleep(5)
       print("so I will present you with the option for 1 move... it will help you rival my might. this helps you heal damage taken on a random base... it goes from your 1 hp to 100 hp... LET'S START THE BATTLE.\n")
-      # time.sleep(13)
+      time.sleep(5)
       player_hp_ohio_f = 600
       essence_of_ohio = 1000
       phof = player_hp_ohio_f
@@ -397,30 +399,37 @@ sys.argv[1:])
       sys.argv[1:])
             break
 
-
-          
+      
+      print("\n\n\nThe esscence of ohio groans his last moments in pain.\n")
+      time.sleep(3)
+      print("Essence of Ohio - I am actually a scientist from the lab you saw in before and we are testing your brain.\n As i die we both to the real world.\n")
+      time.sleep(4)
+      print("You come to the real world and you are in a test tube but you are released and then you are in a room (Begins to remember) you remember as when you changed your clothes for the test to begin.\n")
+      time.sleep(6)
+      print("You have changed to your old clothes and you left the building to your car and check your phone in the car which says 2023.\n")
+      time.sleep(4)
+      print("You been out of the real world for 11 years but you are ready to adapt you drive off into the distance not knowing what will happen next.")
+      time.sleep(4)
+      print("\n\n The End...? \n\n")
+      
       break
     
     
-
-  
-
-      
     # Element: Water element
     elif element == 2:
       
       # Attacks
       print("You have chosen the Water Element , Your memory will now be erased. Your powers are: 1. Tsunami, 2. Water blocker, 3. Washed up, 4. Flash flood.")
       print(" ")
-      # time.sleep(10)
+      time.sleep(4)
       print("Guardian - I cannot tell you if You made a good choice but i wish you the best of luck on your journey..")
-      # time.sleep(8)
+      time.sleep(3)
       print("You enter hell with Your New Water element.")
-      # time.sleep(6)
+      time.sleep(2)
       
       while True:
         print("The gates open into a dimly lit tunnel and you walk for what seems like an infinite amount of time when you come accros a large boulder blocking your path.\n")
-        # time.sleep(7)
+        time.sleep(5)
         boulder_w = input("Would you like to attempt to use your powers on the boulder?\n Type yes or no.\n").lower()
 
         # You use your powers for the boulder.
@@ -478,17 +487,17 @@ sys.argv[1:])
 
       # The story continues
       print("As you walk aimlessly you begin to feel nervous, like there is something watching you. you feel an incline in the tunnel and walk for what was probably hours but felt like days coming across more boulders while testing your newfound abilities. \n")
-      # time.sleep(12)
+      time.sleep(9)
       print("At one point you hit a hard wall but quickly realise it is actually a large door. You are brought back to your senses because of the door instead of a boulder obstructing your path instead. \n")
-      # time.sleep(12)
+      time.sleep(9)
       print("Having nowhere else to go you use a little of your strength to push the door open but to your suprise it opens on its own.\n")
-      # time.sleep(10)
+      time.sleep(7)
       print("When you enter there are spikes all over the room exept on the floor. it somewhat looks like a jailcell with cages hanging from the cieling. \n")
-      # time.sleep(11)
+      time.sleep(8)
       print("In the centre of the room there are two creatures lined with armor and holding spears. They had a look resembled that of an fairy, but corrupted with stonelike skin and gleaming red eyes. Their mouthes were dripping with what you dould only guess was blood and had demeanor was that of a angered beast")
-      # time.sleep(15)
+      time.sleep(12)
       print("After the fairy seeing you enter the room they go into what you can only guess is a crazed frenzy and begin to charge at you.\n")
-      # time.sleep(11)
+      time.sleep(8)
       
 
       # Hp of players
@@ -585,43 +594,43 @@ sys.argv[1:])
 
  # The story continues
       print("You have finnaly killed the creature and you breath a sigh of relief. prehaps you should just lie down and rest... and you slowly close your eyes. \n")
-      # time.sleep(10)
+      time.sleep(5)
       print("This scene feels awfully familiar... no thats impossible the guardian erased all my memories and theres no way i have been here before... \n you hear a small sound at the tip of your ears. \n")
-      # time.sleep(12)
+      time.sleep(6)
       print("You slowly open your eyes to see the similar fairy standing over your face peering down at you. 'You must not be a very good man.' In a fright you immideatly move away. \n")
-      # time.sleep(11)
+      time.sleep(5)
       print("you finally pull yourself together and get up to notice that the cages had all fallen down. You never noticed it at first but the cages all had creatures inside them and they seem to have broken out of their cages. \n")
-      #t ime.sleep(13)
+      time.sleep(6)
       print("The creature were unexpectedly gentle compared to what you would expect lf creatures from hell. \n")
-      # time.sleep(9)
+      time.sleep(3)
       print("The creatures have the ability to communicate and talked to you. The littlest one said that they were not monsters but spirits.\n These are creatures you can trust. \n")
-      # time.sleep(11)
+      time.sleep(5)
       print("You continue down the dark tunnel, but it no longer seems so dull as you are just happy to have people by your side that was until... \n")
-      # time.sleep(11)
+      time.sleep(4)
       print("You hear a giant rumble as the ground breaks beneath you. A enormous hole is created and you begin to fall enwrapped by darkness not sure when it ends. \n")
-      # time.sleep(11)
+      time.sleep(4)
       print("You finally land on ground and your body hurts all over. you look all around you and it seems that the spirits had followed you down. Infront of you there is a large gate which feels uncannily familiar. \n")
-      # time.sleep(12)
+      time.sleep(6)
       print("By now you remember most of your life, your family, friends, school but nothing after you turned 18. \n")
-      # time.sleep(9)
+      time.sleep(3)
       print("Infront of you is a large portal.\n Consumed by curiosity you go through the gate, the spirits following closely behind. \n")
-      # time.sleep(10)
+      time.sleep(4)
       print(" You're now in a large elegantly decorated room woth a figure in the middle that seems awfully familiar...")
-      # time.sleep(9)
+      time.sleep(4)
       print("He turns around and its the guardian! Why? Why is he here? \n")
-      # time.sleep(7)
+      time.sleep(2)
       print("Guardian - Human. You have fallen for my charades yet again! Oh how could you be so stupid? I am no guardian, you are not good and this is not hell! \n")
-      # time.sleep(11)
+      time.sleep(5)
       print("Guardian - I am actually the Essence of Ohio. You have to battle me to get out of this world.\n")
-      # time.sleep(12)
+      time.sleep(3)
 
 
       print("You meet face to face with the essence of Ohio.. \n")
-      # time.sleep(6)
+      time.sleep(2)
       print("Essence of Ohio - Hello again .. i understand that you have conquered hell with my power... and you should understand that you only have an fraction of my power.\n")
-      # time.sleep(11)
+      time.sleep(5)
       print("so I will present you with the option for 1 move... it will help you rival my might. this helps you heal damage taken on a random base... it goes from your 1 hp to 100 hp... LET'S START THE BATTLE.\n")
-      # time.sleep(13)
+      time.sleep(6)
       player_hp_ohio_w = 600
       essence_of_ohio = 1000
       phow = player_hp_ohio_w
@@ -736,6 +745,17 @@ sys.argv[1:])
       sys.argv[1:])
             break
 
+      print("\n\n\nThe esscence of ohio groans his last moments in pain.\n")
+      time.sleep(3)
+      print("Essence of Ohio - I am actually a scientist from the lab you saw in before and we are testing your brain.\n As i die we both to the real world.\n")
+      time.sleep(4)
+      print("You come to the real world and you are in a test tube but you are released and then you are in a room (Begins to remember) you remember as when you changed your clothes for the test to begin.\n")
+      time.sleep(6)
+      print("You have changed to your old clothes and you left the building to your car and check your phone in the car which says 2023.\n")
+      time.sleep(4)
+      print("You been out of the real world for 11 years but you are ready to adapt you drive off into the distance not knowing what will happen next.")
+      time.sleep(4)
+      print("\n\n The End...? \n\n")
       break
       
       
@@ -744,15 +764,15 @@ sys.argv[1:])
 
       # Attacks
       print("You have chosen the Earth Element , Your memory will now be erased. Your powers are: 1. Retreat behind the hill, 2. Trash compactor, 3. Dig deep. 4. Earth quake.")
-      # time.sleep(10)
+      time.sleep(4)
       print("Guardian - I see. I cannot guarantee it was a good choice I do however, wish you luck on your journey. \n")
-      # time.sleep(8)
+      time.sleep(3)
       print("You enter hell with Your New Earth element.")
-      # time.sleep(6)
+      time.sleep(2)
 
       while True:
         print("The gates open into a dimly lit tunnel and you walk for what seems like an infinite amount of time when you come accros a large boulder blocking your path.\n")
-        # time.sleep(7)
+        time.sleep(5)
         boulder_e = input("Would you like to attempt to use your powers on the boulder?\n Type yes or no.\n").lower()
 
         # You use your powers for the boulder.
@@ -810,17 +830,17 @@ sys.argv[1:])
 
         # The story continues
       print("As you walk aimlessly you begin to feel nervous, like there is something watching you. you feel an incline in the tunnel and walk for what was probably hours but felt like days coming across more boulders while testing your newfound abilities. \n")
-      # time.sleep(12)
+      time.sleep(9)
       print("At one point you hit a hard wall but quickly realise it is actually a large door. You are brought back to your senses because of the door instead of a boulder obstructing your path instead. \n")
-      # time.sleep(12)
+      time.sleep(9)
       print("Having nowhere else to go you use a little of your strength to push the door open but to your suprise it opens on its own.\n")
-      # time.sleep(10)
+      time.sleep(7)
       print("When you enter there are spikes all over the room exept on the floor. it somewhat looks like a jailcell with cages hanging from the cieling. \n")
-      # time.sleep(11)
+      time.sleep(8)
       print("In the centre of the room there are two creatures lined with armor and holding spears. They had a look resembled that of an fairy, but corrupted with stonelike skin and gleaming red eyes. Their mouthes were dripping with what you dould only guess was blood and had demeanor was that of a angered beast")
-      # time.sleep(15)
+      time.sleep(12)
       print("After the fairy seeing you enter the room they go into what you can only guess is a crazed frenzy and begin to charge at you.\n")
-      # time.sleep(11)
+      time.sleep(8)
       
 
       # Hp of players
@@ -917,45 +937,45 @@ sys.argv[1:])
 
         # The story continues
       print("You have finnaly killed the creature and you breath a sigh of relief. prehaps you should just lie down and rest... and you slowly close your eyes. \n")
-      # time.sleep(10)
+      time.sleep(4)
       print("This scene feels awfully familiar... no thats impossible the guardian erased all my memories and theres no way i have been here before... \n you hear a small sound at the tip of your ears. \n")
-      # time.sleep(12)
+      time.sleep(6)
       print("You slowly open your eyes to see the similar fairy standing over your face peering down at you. 'You must not be a very good man.' In a fright you immideatly move away. \n")
-      # time.sleep(11)
+      time.sleep(5)
       print("you finally pull yourself together and get up to notice that the cages had all fallen down. You never noticed it at first but the cages all had creatures inside them and they seem to have broken out of their cages. \n")
-      #t ime.sleep(13)
+      time.sleep(6)
       print("The creature were unexpectedly gentle compared to what you would expect lf creatures from hell. \n")
-      # time.sleep(9)
+      time.sleep(3)
       print("The creatures have the ability to communicate and talked to you. The littlest one said that they were not monsters but spirits.\n These are creatures you can trust. \n")
-      # time.sleep(11)
+      time.sleep(5)
       print("You continue down the dark tunnel, but it no longer seems so dull as you are just happy to have people by your side that was until... \n")
-      # time.sleep(11)
+      time.sleep(4)
       print("You hear a giant rumble as the ground breaks beneath you. A enormous hole is created and you begin to fall enwrapped by darkness not sure when it ends. \n")
-      # time.sleep(11)
+      time.sleep(4)
       print("You finally land on ground and your body hurts all over. you look all around you and it seems that the spirits had followed you down. Infront of you there is a large gate which feels uncannily familiar. \n")
-      # time.sleep(12)
+      time.sleep(6)
       print("By now you remember most of your life, your family, friends, school but nothing after you turned 18. \n")
-      # time.sleep(9)
+      time.sleep(3)
       print("Infront of you is a large portal.\n Consumed by curiosity you go through the gate, the spirits following closely behind. \n")
-      # time.sleep(10)
+      time.sleep(4)
       print(" You're now in a large elegantly decorated room woth a figure in the middle that seems awfully familiar...")
-      # time.sleep(9)
+      time.sleep(3)
       print("He turns around and its the guardian! Why? Why is he here? \n")
-      # time.sleep(7)
+      time.sleep(2)
       print("Guardian - Human. You have fallen for my charades yet again! Oh how could you be so stupid? I am no guardian, you are not good and this is not hell! \n")
-      # time.sleep(11)
+      time.sleep(4)
       print("Guardian - I am actually the Essence of Ohio. You have to battle me to get out of this world.\n")
-      # time.sleep(12)
+      time.sleep(3)
 
       
 
       
       print("You meet face to face with the essence of Ohio.. \n")
-      # time.sleep(6)
+      time.sleep(2)
       print("Essence of Ohio - Hello again .. i understand that you have conquered hell with my power... and you should understand that you only have an fraction of my power.\n")
-      # time.sleep(11)
+      time.sleep(5)
       print("so I will present you with the option for 1 move... it will help you rival my might. this helps you heal damage taken on a random base... it goes from your 1 hp to 100 hp... LET'S START THE BATTLE.\n")
-      # time.sleep(13)
+      time.sleep(6)
       player_hp_ohio_e = 600
       essence_of_ohio = 1000
       phoe = player_hp_ohio_e
@@ -1070,6 +1090,17 @@ sys.argv[1:])
       sys.argv[1:])
             break
 
+      print("\n\n\nThe esscence of ohio groans his last moments in pain.\n")
+      time.sleep(3)
+      print("Essence of Ohio - I am actually a scientist from the lab you saw in before and we are testing your brain.\n As i die we both to the real world.\n")
+      time.sleep(4)
+      print("You come to the real world and you are in a test tube but you are released and then you are in a room (Begins to remember) you remember as when you changed your clothes for the test to begin.\n")
+      time.sleep(6)
+      print("You have changed to your old clothes and you left the building to your car and check your phone in the car which says 2023.\n")
+      time.sleep(4)
+      print("You been out of the real world for 11 years but you are ready to adapt you drive off into the distance not knowing what will happen next.")
+      time.sleep(4)
+      print("\n\n The End...? \n\n")
       break
       
       # Element: Space element
@@ -1077,15 +1108,15 @@ sys.argv[1:])
 
       # Attacks
       print("You have chosen the Space Element , Your memory will now be erased. Your powers are:  1. Antigravity, 2. Black hole, 3. orbit, 4. fly away.")
-      # time.sleep(10)
+      time.sleep(4)
       print("Guardian - I see. I cannot guarantee it was a good choice I do however, wish you luck on your journey. \n")
-      # time.sleep(8)
+      time.sleep(3)
       print("You enter hell with Your New Space element.")
-      # time.sleep(6)
+      time.sleep(2)
       
       while True:
         print("The gates open into a dimly lit tunnel and you walk for what seems like an infinite amount of time when you come accros a large boulder blocking your path.\n")
-        # time.sleep(7)
+        time.sleep(5)
         boulder_s = input("Would you like to attempt to use your powers on the boulder?\n Type yes or no.\n").lower()
 
         # You use your powers for the boulder.
@@ -1143,17 +1174,17 @@ sys.argv[1:])
 
         # The story continues
       print("As you walk aimlessly you begin to feel nervous, like there is something watching you. you feel an incline in the tunnel and walk for what was probably hours but felt like days coming across more boulders while testing your newfound abilities. \n")
-      # time.sleep(12)
+      time.sleep(9)
       print("At one point you hit a hard wall but quickly realise it is actually a large door. You are brought back to your senses because of the door instead of a boulder obstructing your path instead. \n")
-      # time.sleep(12)
+      time.sleep(9)
       print("Having nowhere else to go you use a little of your strength to push the door open but to your suprise it opens on its own.\n")
-      # time.sleep(10)
+      time.sleep(7)
       print("When you enter there are spikes all over the room exept on the floor. it somewhat looks like a jailcell with cages hanging from the cieling. \n")
-      # time.sleep(11)
+      time.sleep(8)
       print("In the centre of the room there are two creatures lined with armor and holding spears. They had a look resembled that of an fairy, but corrupted with stonelike skin and gleaming red eyes. Their mouthes were dripping with what you dould only guess was blood and had demeanor was that of a angered beast")
-      # time.sleep(15)
+      time.sleep(12)
       print("After the fairy seeing you enter the room they go into what you can only guess is a crazed frenzy and begin to charge at you.\n")
-      # time.sleep(11)
+      time.sleep(8)
 
       earth_fairy_hp = 500
       efh = earth_fairy_hp
@@ -1245,43 +1276,43 @@ sys.argv[1:])
         
     # The story continues
       print("You have finnaly killed the creature and you breath a sigh of relief. prehaps you should just lie down and rest... and you slowly close your eyes. \n")
-      # time.sleep(10)
+      time.sleep(4)
       print("This scene feels awfully familiar... no thats impossible the guardian erased all my memories and theres no way i have been here before... \n you hear a small sound at the tip of your ears. \n")
-      # time.sleep(12)
+      time.sleep(6)
       print("You slowly open your eyes to see the similar fairy standing over your face peering down at you. 'You must not be a very good man.' In a fright you immideatly move away. \n")
-      # time.sleep(11)
+      time.sleep(5)
       print("you finally pull yourself together and get up to notice that the cages had all fallen down. You never noticed it at first but the cages all had creatures inside them and they seem to have broken out of their cages. \n")
-      #t ime.sleep(13)
+      time.sleep(6)
       print("The creature were unexpectedly gentle compared to what you would expect lf creatures from hell. \n")
-      # time.sleep(9)
+      time.sleep(3)
       print("The creatures have the ability to communicate and talked to you. The littlest one said that they were not monsters but spirits.\n These are creatures you can trust. \n")
-      # time.sleep(11)
+      time.sleep(5)
       print("You continue down the dark tunnel, but it no longer seems so dull as you are just happy to have people by your side that was until... \n")
-      # time.sleep(11)
+      time.sleep(4)
       print("You hear a giant rumble as the ground breaks beneath you. A enormous hole is created and you begin to fall enwrapped by darkness not sure when it ends. \n")
-      # time.sleep(11)
+      time.sleep(4)
       print("You finally land on ground and your body hurts all over. you look all around you and it seems that the spirits had followed you down. Infront of you there is a large gate which feels uncannily familiar. \n")
-      # time.sleep(12)
+      time.sleep(6)
       print("By now you remember most of your life, your family, friends, school but nothing after you turned 18. \n")
-      # time.sleep(9)
+      time.sleep(3)
       print("Infront of you is a large portal.\n Consumed by curiosity you go through the gate, the spirits following closely behind. \n")
-      # time.sleep(10)
+      time.sleep(3)
       print(" You're now in a large elegantly decorated room woth a figure in the middle that seems awfully familiar...")
-      # time.sleep(9)
+      time.sleep(3)
       print("He turns around and its the guardian! Why? Why is he here? \n")
-      # time.sleep(7)
+      time.sleep(2)
       print("Guardian - Human. You have fallen for my charades yet again! Oh how could you be so stupid? I am no guardian, you are not good and this is not hell! \n")
-      # time.sleep(11)
+      time.sleep(4)
       print("Guardian - I am actually the Essence of Ohio. You have to battle me to get out of this world.\n")
-      # time.sleep(12)
+      time.sleep(3)
 
 
       print("You meet face to face with the essence of Ohio.. \n")
-      # time.sleep(6)
+      time.sleep(2)
       print("Essence of Ohio - Hello again .. i understand that you have conquered hell with my power... and you should understand that you only have an fraction of my power.\n")
-      # time.sleep(11)
+      time.sleep(4)
       print("so I will present you with the option for 1 move... it will help you rival my might. this helps you heal damage taken on a random base... it goes from your 1 hp to 100 hp... LET'S START THE BATTLE.\n")
-      # time.sleep(13)
+      time.sleep(6)
       player_hp_ohio_s = 600
       essence_of_ohio = 1000
       phos = player_hp_ohio_s
@@ -1396,6 +1427,17 @@ sys.argv[1:])
       sys.argv[1:])
             break
       
+      print("\n\n\nThe esscence of ohio groans his last moments in pain.\n")
+      time.sleep(3)
+      print("Essence of Ohio - I am actually a scientist from the lab you saw in before and we are testing your brain.\n As i die we both to the real world.\n")
+      time.sleep(4)
+      print("You come to the real world and you are in a test tube but you are released and then you are in a room (Begins to remember) you remember as when you changed your clothes for the test to begin.\n")
+      time.sleep(6)
+      print("You have changed to your old clothes and you left the building to your car and check your phone in the car which says 2023.\n")
+      time.sleep(4)
+      print("You been out of the real world for 11 years but you are ready to adapt you drive off into the distance not knowing what will happen next.")
+      time.sleep(4)
+      print("\n\n The End...? \n\n")
       break
     
 
@@ -1404,15 +1446,15 @@ sys.argv[1:])
 
       # Attacks
       print("You have chosen the Air Element , Your memory will now be erased. Your powers are: 1. Upper Class, 2. tornado, 3.Blow them away, 4. Dizzying speed.")
-      # time.sleep(10)
+      time.sleep(4)
       print("Guardian - I cannot tell you if You made a good choice but i wish you the best of luck on your journey..")
-      # time.sleep(8)
+      time.sleep(3)
       print("You enter hell with Your New Air element.")
-      # time.sleep(6)
+      time.sleep(2)
       
       while True:
         print("The gates open into a dimly lit tunnel and you walk for what seems like an infinite amount of time when you come accros a large boulder blocking your path.\n")
-        # time.sleep(7)
+        time.sleep(5)
         boulder_a = input("Would you like to attempt to use your powers on the boulder?\n Type yes or no.\n").lower()
 
         # You use your powers for the boulder.
@@ -1457,19 +1499,19 @@ sys.argv[1:])
           break
         break
         
-      # The story continues
+       The story continues
       print("As you walk aimlessly you begin to feel nervous, like there is something watching you. you feel an incline in the tunnel and walk for what was probably hours but felt like days coming across more boulders while testing your newfound abilities. \n")
-      # time.sleep(12)
+      time.sleep(9)
       print("At one point you hit a hard wall but quickly realise it is actually a large door. You are brought back to your senses because of the door instead of a boulder obstructing your path instead. \n")
-      # time.sleep(12)
+      time.sleep(9)
       print("Having nowhere else to go you use a little of your strength to push the door open but to your suprise it opens on its own.\n")
-      # time.sleep(10)
+      time.sleep(7)
       print("When you enter there are spikes all over the room exept on the floor. it somewhat looks like a jailcell with cages hanging from the cieling. \n")
-      # time.sleep(11)
+      time.sleep(8)
       print("In the centre of the room there are two creatures lined with armor and holding spears. They had a look resembled that of an fairy, but corrupted with stonelike skin and gleaming red eyes. Their mouthes were dripping with what you dould only guess was blood and had demeanor was that of a angered beast")
-      # time.sleep(15)
+      time.sleep(12)
       print("After the fairy seeing you enter the room they go into what you can only guess is a crazed frenzy and begin to charge at you.\n")
-      # time.sleep(11)
+      time.sleep(8)
 
       
       earth_fairy_hp = 500
@@ -1563,43 +1605,43 @@ sys.argv[1:])
             
       # The story continues
       print("You have finnaly killed the creature and you breath a sigh of relief. prehaps you should just lie down and rest... and you slowly close your eyes. \n")
-      # time.sleep(10)
+      time.sleep(4)
       print("This scene feels awfully familiar... no thats impossible the guardian erased all my memories and theres no way i have been here before... \n you hear a small sound at the tip of your ears. \n")
-      # time.sleep(12)
+      time.sleep(6)
       print("You slowly open your eyes to see the similar fairy standing over your face peering down at you. 'You must not be a very good man.' In a fright you immideatly move away. \n")
-      # time.sleep(11)
+      time.sleep(5)
       print("you finally pull yourself together and get up to notice that the cages had all fallen down. You never noticed it at first but the cages all had creatures inside them and they seem to have broken out of their cages. \n")
-      #t ime.sleep(13)
+      time.sleep(6)
       print("The creature were unexpectedly gentle compared to what you would expect lf creatures from hell. \n")
-      # time.sleep(9)
+      time.sleep(3)
       print("The creatures have the ability to communicate and talked to you. The littlest one said that they were not monsters but spirits.\n These are creatures you can trust. \n")
-      # time.sleep(11)
+      time.sleep(5)
       print("You continue down the dark tunnel, but it no longer seems so dull as you are just happy to have people by your side that was until... \n")
-      # time.sleep(11)
+      time.sleep(4)
       print("You hear a giant rumble as the ground breaks beneath you. A enormous hole is created and you begin to fall enwrapped by darkness not sure when it ends. \n")
-      # time.sleep(11)
+      time.sleep(4)
       print("You finally land on ground and your body hurts all over. you look all around you and it seems that the spirits had followed you down. Infront of you there is a large gate which feels uncannily familiar. \n")
-      # time.sleep(12)
+      time.sleep(6)
       print("By now you remember most of your life, your family, friends, school but nothing after you turned 18. \n")
-      # time.sleep(9)
+      time.sleep(3)
       print("In front of you is a large portal.\n Consumed by curiosity you go through the gate, the spirits following closely behind. \n")
-      # time.sleep(10)
+      time.sleep(4)
       print(" You're now in a large elegantly decorated room woth a figure in the middle that seems awfully familiar...")
-      # time.sleep(9)
+      time.sleep(3)
       print("He turns around and its the guardian! Why? Why is he here? \n")
-      # time.sleep(7)
+      time.sleep(2)
       print("Guardian - Human. You have fallen for my charades yet again! Oh how could you be so stupid? I am no guardian, you are not good and this is not hell! \n")
-      # time.sleep(11)
+      time.sleep(5)
       print("Guardian - I am actually the Essence of Ohio. You have to battle me to get out of this world.\n")
-      # time.sleep(12)
+      time.sleep(3)
 
 
       print("You meet face to face with the essence of Ohio.. \n")
-      # time.sleep(6)
+      time.sleep(2)
       print("Essence of Ohio - Hello again .. i understand that you have conquered hell with my power... and you should understand that you only have an fraction of my power.\n")
-      # time.sleep(11)
+      time.sleep(5)
       print("so I will present you with the option for 1 move... it will help you rival my might. this helps you heal damage taken on a random base... it goes from your 1 hp to 100 hp... LET'S START THE BATTLE.\n")
-      # time.sleep(13)
+      time.sleep(6)
       player_hp_ohio_a = 600
       essence_of_ohio = 1000
       phoa = player_hp_ohio_a
@@ -1713,6 +1755,17 @@ sys.argv[1:])
             subprocess.call([sys.executable, os.path.realpath(__file__)] +
       sys.argv[1:])
             break
+      print("\n\n\nThe esscence of ohio groans his last moments in pain.\n")
+      time.sleep(3)
+      print("Essence of Ohio - I am actually a scientist from the lab you saw in before and we are testing your brain.\n As i die we both to the real world.\n")
+      time.sleep(4)
+      print("You come to the real world and you are in a test tube but you are released and then you are in a room (Begins to remember) you remember as when you changed your clothes for the test to begin.\n")
+      time.sleep(6)
+      print("You have changed to your old clothes and you left the building to your car and check your phone in the car which says 2023.\n")
+      time.sleep(4)
+      print("You been out of the real world for 11 years but you are ready to adapt you drive off into the distance not knowing what will happen next.")
+      time.sleep(4)
+      print("\n\n The End...? \n\n")
       break
     break
       
@@ -1721,13 +1774,13 @@ sys.argv[1:])
   elif offer == "no":
     
     print("Guardian - Hmmm")
-    # time.sleep(2)
+    time.sleep(1)
     print("Guardian - It seems you dont want to live. Well, I will still let you through the gates of hell... And maybe I will see you again")
-    # time.sleep(4)
+    time.sleep(4)
     
     # You are vaporised from hell.
     print("You enter hell without any powers, due to you having no powers to fight the forces of hell. The power in hell evaporates you get erased from exsistence.\n\n")
-    # time.sleep(10)
+     time.sleep(4)
     print("This is ending 1.")
     print("!!!GAME OVER!!!")
     break
