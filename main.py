@@ -39,7 +39,7 @@ time.sleep(3)
 print("You Are no longer in the test tube .. But you are now in front of a unknown being...\n")
 time.sleep(3)
 print("You look around , It seems you are at the entrance of a dungeon.\n")
- time.sleep(3)
+time.sleep(3)
 
 
 # The user is told about the gates of hell
@@ -256,7 +256,7 @@ sys.argv[1:])
       print("you finally pull yourself together and get up to notice that the cages had all fallen down. You never noticed it at first but the cages all had creatures inside them and they seem to have broken out of their cages. \n")
       time.sleep(5)
       print("The creature were unexpectedly gentle compared to what you would expect lf creatures from hell. \n")
-       time.sleep(3)
+      time.sleep(3)
       print("The creatures have the ability to communicate and talked to you. The littlest one said that they were not monsters but spirits.\n These are creatures you can trust. \n")
       time.sleep(4)
       print("You continue down the dark tunnel, but it no longer seems so dull as you are just happy to have people by your side that was until... \n")
@@ -1499,7 +1499,7 @@ sys.argv[1:])
           break
         break
         
-       The story continues
+      # The story continues
       print("As you walk aimlessly you begin to feel nervous, like there is something watching you. you feel an incline in the tunnel and walk for what was probably hours but felt like days coming across more boulders while testing your newfound abilities. \n")
       time.sleep(9)
       print("At one point you hit a hard wall but quickly realise it is actually a large door. You are brought back to your senses because of the door instead of a boulder obstructing your path instead. \n")
@@ -1780,7 +1780,7 @@ sys.argv[1:])
     
     # You are vaporised from hell.
     print("You enter hell without any powers, due to you having no powers to fight the forces of hell. The power in hell evaporates you get erased from exsistence.\n\n")
-     time.sleep(4)
+    time.sleep(4)
     print("This is ending 1.")
     print("!!!GAME OVER!!!")
     break
